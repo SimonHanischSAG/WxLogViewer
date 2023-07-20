@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="shared">cHJpdmF0ZSBzdGF0aWMgZmluYWwgU3RyaW5nIExPR19GVU5DVElPTiA9ICJXeExvZzRqMiI7Cgpz
+dGF0aWMgQ29uY3VycmVudEhhc2hNYXA8U3RyaW5nLCBPcGVuUmVhZGVyPiBvcGVuUmVhZGVyTWFw
+ID0gbmV3IENvbmN1cnJlbnRIYXNoTWFwPFN0cmluZywgT3BlblJlYWRlcj4oKTsKCnB1YmxpYyBz
+dGF0aWMgY2xhc3MgT3BlblJlYWRlciB7CglwdWJsaWMgRmlsZSBmaWxlID0gbnVsbDsKCXB1Ymxp
+YyBsb25nIGxhc3RGaWxlTGVuZ3RoID0gMDsKCXB1YmxpYyBCdWZmZXJlZFJlYWRlciBidWZmZXJl
+ZFJlYWRlciA9IG51bGw7CglwdWJsaWMgRGF0ZSBsYXN0TW9kaWZpZWQgPSBuZXcgRGF0ZSgpOwoJ
+cHVibGljIE9wZW5SZWFkZXIoRmlsZSBmaWxlLCBsb25nIGxhc3RGaWxlTGVuZ3RoLCBCdWZmZXJl
+ZFJlYWRlciBidWZmZXJlZFJlYWRlcikgewoJCXRoaXMuZmlsZSA9IGZpbGU7CgkJdGhpcy5sYXN0
+RmlsZUxlbmd0aCA9IGxhc3RGaWxlTGVuZ3RoOwoJCXRoaXMuYnVmZmVyZWRSZWFkZXIgPSBidWZm
+ZXJlZFJlYWRlcjsKCX0KCQp9CgpwdWJsaWMgc3RhdGljIGZpbmFsIEZpbGUgZ2V0TG9nc0ZvbGRl
+cigpIHRocm93cyBTZXJ2aWNlRXhjZXB0aW9uIHsKCUZpbGUgbG9nc0ZvbGRlciA9IG5ldyBGaWxl
+KFNlcnZlci5nZXRMb2dEaXIoKSwgIiIgKTsKCWlmIChsb2dzRm9sZGVyLmlzRGlyZWN0b3J5KCkp
+IHsKCQlyZXR1cm4gbG9nc0ZvbGRlcjsKCQl9IAoJCWVsc2UgewoJCQoJCQoJCXRocm93IG5ldyBT
+ZXJ2aWNlRXhjZXB0aW9uKCJDYW5ub3QgZmluZCBsb2dzRm9sZGVyIGRpcmVjdG9yeSEiKTsKCX0K
+fQkJCgpwcml2YXRlIHN0YXRpYyB2b2lkIGRlYnVnTG9nRXJyb3IoU3RyaW5nIG1lc3NhZ2UpIHsK
+ICAgIEpvdXJuYWxMb2dnZXIubG9nKDQsICBKb3VybmFsTG9nZ2VyLkZBQ19GTE9XX1NWQywgSm91
+cm5hbExvZ2dlci5FUlJPUiwgTE9HX0ZVTkNUSU9OLCBtZXNzYWdlKTsKfQoKcHJpdmF0ZSBzdGF0
+aWMgdm9pZCBkZWJ1Z0xvZ0luZm8oU3RyaW5nIG1lc3NhZ2UpIHsKICAgIEpvdXJuYWxMb2dnZXIu
+bG9nKDQsICBKb3VybmFsTG9nZ2VyLkZBQ19GTE9XX1NWQywgSm91cm5hbExvZ2dlci5JTkZPLCBM
+T0dfRlVOQ1RJT04sIG1lc3NhZ2UpOwp9Cgpwcml2YXRlIHN0YXRpYyB2b2lkIGRlYnVnTG9nRGVi
+dWcoU3RyaW5nIG1lc3NhZ2UpIHsKICAgIEpvdXJuYWxMb2dnZXIubG9nKDQsICBKb3VybmFsTG9n
+Z2VyLkZBQ19GTE9XX1NWQywgSm91cm5hbExvZ2dlci5JTkZPLCBMT0dfRlVOQ1RJT04sIG1lc3Nh
+Z2UpOwp9CgkKCQoJ</value>
+  <value name="encodeutf8">true</value>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.util.JournalLogger</value>
+    <value>com.softwareag.util.IDataMap</value>
+    <value>com.wm.app.b2b.server.Server</value>
+    <value>java.io.BufferedReader</value>
+    <value>java.io.File</value>
+    <value>java.io.FileNotFoundException</value>
+    <value>java.io.FileReader</value>
+    <value>java.io.IOException</value>
+    <value>java.text.DecimalFormat</value>
+    <value>java.text.SimpleDateFormat</value>
+    <value>java.util.ArrayList</value>
+    <value>java.util.Collection</value>
+    <value>java.util.Date</value>
+    <value>java.util.LinkedList</value>
+    <value>java.util.Map.Entry</value>
+    <value>java.util.Set</value>
+    <value>java.util.concurrent.ConcurrentHashMap</value>
+    <value>org.apache.commons.io.FileUtils</value>
+    <value>org.apache.commons.io.filefilter.AgeFileFilter</value>
+    <value>org.apache.commons.io.filefilter.IOFileFilter</value>
+    <value>org.apache.commons.io.filefilter.TrueFileFilter</value>
+  </array>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+</Values>

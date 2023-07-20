@@ -1,0 +1,79 @@
+<html>
+	<head>
+	<title>Title</title>
+        <script src="/WxLogViewer/js/config.js"></script>
+        <script src="/WxLogViewer/js/jquery.min.js"></script>
+		<script>
+			var params = new URLSearchParams(window.location.search);
+			var file = params.get('file');
+			var initialsize = params.get('initialsize');
+			var index = file.lastIndexOf('/');
+			if (index < 0) index = file.lastIndexOf('\\');
+			document.title = file.substring(index + 1);
+			
+			var uuid = Math.random().toString(16).slice(2) + Math.random().toString(16).slice(2);
+			var lines = 0;
+			var maxLines = 100000;
+			
+			var toTop = function() {
+				$("body").scrollTop(0);
+			}
+			
+			var toBottom = function() {
+				var out = $("body");
+				out.scrollTop(out.prop("scrollHeight"));
+			}
+			
+			var fetchLines = function() {
+				$.getJSON(encodeURI(restUrl +'tailLogfile?filename='+ file +'&uuid='+ uuid +'&initialsize='+ initialsize), function(data) {
+					var logs = data.logdata;
+					if (logs && logs.length > 0) {
+						lines += logs.length;
+						
+						var out = $("body");
+						var scrollHeight = out.prop("scrollHeight");
+						var clientHeight = out.prop("clientHeight");
+						var scrollTop = out.scrollTop();
+						
+						for (var i = 0; i < logs.length; i++) {
+							out.append('<pre>'+ logs[i] +'</pre>');
+						}
+						
+						if (lines > maxLines) {
+							var remove = lines - maxLines;
+							lines = maxLines;
+							for (var i = 0; i < remove; i++) {
+								out.find('pre:first').remove();
+							}
+						}
+						
+						// Autoscroll to bottom only we were already on bottom before adding new lines
+						if (Math.abs(scrollHeight - clientHeight - scrollTop) < 1) {
+							toBottom();
+						}
+					}
+					setTimeout(fetchLines);
+				})
+			};
+			fetchLines();
+		</script>
+		<style>
+		pre { margin: 0; }
+		#controls {
+			  position: fixed;
+			  background: white;
+			  top: 0;
+			  right: 0;
+			  padding: 5px;
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<div id="log-out"></div>
+		<div id="controls">
+			<button onclick="toTop()">To top</button> 
+			<button onclick="toBottom()">To bottom</button>
+		</div>
+	</body>
+</html>
