@@ -36,7 +36,8 @@
 						var scrollTop = out.scrollTop();
 						
 						for (var i = 0; i < logs.length; i++) {
-							out.append('<pre>'+ logs[i] +'</pre>');
+							var pre = out.append('<pre></pre>');
+							pre.append(document.createTextNode(logs[i]));
 						}
 						
 						if (lines > maxLines) {
@@ -70,7 +71,6 @@
 		</style>
 	</head>
 	<body>
-		<div id="log-out"></div>
 		<div id="controls">
 			<button onclick="toTop()">To top</button> 
 			<button onclick="toBottom()">To bottom</button>
